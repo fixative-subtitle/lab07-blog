@@ -8,8 +8,9 @@ const routes = {};
 // paths beginning with /posts.
 routes.connect = (app) => {
   // Use the index controller for /
-  app.use('/', index);
+  app.use('/', index); // this is the route for the index controller
   // TODO: Use the posts controller for /posts
+  app.use('/posts', posts) // this is the route for the posts controller
 };
 
 module.exports = routes;
